@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="userDao" class="com.tgb.dao.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="userManagerBase" class="com.tgb.manager.UserManagerImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	
+	
+	<!-- 此处为代理 -->
+	<bean name="userManager" parent="transactionProxy">
+		<property name="target" ref="userManagerBase"></property>
+	</bean>	
+	
+	
+	
+	
+	<bean id="oauthCompanyDao" class="com.tgb.dao.OauthCompanyDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="oauthCompanyManagerBase" class="com.tgb.manager.OauthCompanyManagerImpl">
+		<property name="oauthCompanyDao" ref="oauthCompanyDao"></property>
+	</bean>
+	
+	<!-- 此处为代理 -->
+	<bean name="oauthCompanyManager" parent="transactionProxy">
+		<property name="target" ref="oauthCompanyManagerBase"></property>
+	</bean>	
+	
+	
+	
+	<bean id="oauthCodeDao" class="com.tgb.dao.OauthCodeDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="oauthCodeManagerBase" class="com.tgb.manager.OauthCodeManagerImpl">
+		<property name="oauthCodeDao" ref="oauthCodeDao"></property>
+	</bean>
+	
+	<!-- 此处为代理 -->
+	<bean name="oauthCodeManager" parent="transactionProxy">
+		<property name="target" ref="oauthCodeManagerBase"></property>
+	</bean>	
+	
+	
+	
+	
+	<bean id="oauthAccessTokenDao" class="com.tgb.dao.OauthAccessTokenDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="oauthAccessTokenManagerBase" class="com.tgb.manager.OauthAccessTokenManagerImpl">
+		<property name="oauthAccessTokenDao" ref="oauthAccessTokenDao"></property>
+	</bean>
+	
+	<!-- 此处为代理 -->
+	<bean name="oauthAccessTokenManager" parent="transactionProxy">
+		<property name="target" ref="oauthAccessTokenManagerBase"></property>
+	</bean>	
+</beans>
