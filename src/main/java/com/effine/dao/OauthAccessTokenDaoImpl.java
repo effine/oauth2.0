@@ -15,8 +15,6 @@ public class OauthAccessTokenDaoImpl implements OauthAccessTokenDao {
 		this.sessionFactory = sessionFactory;
 	}
 	
-	
-	
 	public boolean checkCid(String name){
 		String sql = "select * from yl_oauth2_accesstoken where company_name='"+name+"'";
 		Query query = sessionFactory.getCurrentSession().createSQLQuery(sql);
@@ -48,57 +46,37 @@ public class OauthAccessTokenDaoImpl implements OauthAccessTokenDao {
 		return  flag;
 	}
 
-
 	@Override
 	public void addoAccessToken(OauthAccessToken oauthAccessToken) {
-		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(oauthAccessToken);
 	}
 
-
-
 	@Override
 	public boolean deloAccessToken(String id) {
-		// TODO Auto-generated method stub
 		String hql = "delete OauthAccessToken u where u.id = ?";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setString(0, id);
-		
 		return (query.executeUpdate() > 0);
 	}
 
-
-
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<OauthAccessToken> getAlloAccessToken() {
-		// TODO Auto-generated method stub
 		String hql = "from OauthAccessToken";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
-		
 		return query.list();
 	}
-
-
-
+	
 	@Override
 	public OauthAccessToken getoAccessToken(String id) {
-		// TODO Auto-generated method stub
 		String hql = "from OauthAccessToken u where u.id=?";
 		Query query = sessionFactory.getCurrentSession().createQuery(hql);
 		query.setString(0, id);
-		
 		return (OauthAccessToken)query.uniqueResult();
 	}
 
-
-
 	@Override
 	public boolean updateoAccessToken(String id) {
-		// TODO Auto-generated method stub
 		return false;
 	}
-
-
-
-
 }
