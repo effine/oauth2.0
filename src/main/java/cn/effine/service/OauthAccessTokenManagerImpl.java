@@ -2,8 +2,8 @@ package cn.effine.service;
 
 import java.util.List;
 
-import main.java.com.effine.dao.OauthAccessTokenDao;
-import main.java.com.effine.model.OauthAccessToken;
+import cn.effine.dao.OauthAccessTokenDao;
+import cn.effine.model.OauthAccessToken;
 
 public class OauthAccessTokenManagerImpl implements OauthAccessTokenManager {
 

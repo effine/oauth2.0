@@ -2,7 +2,7 @@ package cn.effine.dao;
 
 import java.util.List;
 
-import main.java.com.effine.model.OauthCompany;
+import cn.effine.model.OauthCompany;
 
 
 public interface OauthCompanyDao {

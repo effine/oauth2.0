@@ -2,7 +2,7 @@ package cn.effine.service;
 
 import java.util.List;
 
-import main.java.com.effine.model.OauthAccessToken;
+import cn.effine.model.OauthAccessToken;
 
 public interface OauthAccessTokenManager {
     public OauthAccessToken getoAccessToken(String id);

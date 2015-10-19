@@ -2,11 +2,8 @@ package cn.effine.service;
 
 import java.util.List;
 
-
-
-
-import main.java.com.effine.dao.UserDao;
-import main.java.com.effine.model.User;
+import cn.effine.dao.UserDao;
+import cn.effine.model.User;
 public class UserManagerImpl implements UserManager {
 
 	private UserDao userDao;

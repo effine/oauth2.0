@@ -5,10 +5,10 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Random;
 
-import main.java.com.effine.json.BrowserLaunch;
-import main.java.com.effine.json.JsonObject;
-import main.java.com.effine.json.JsonUtil;
-import main.java.com.effine.json.MD5Tool;
+import cn.effine.json.BrowserLaunch;
+import cn.effine.json.JsonObject;
+import cn.effine.json.JsonUtil;
+import cn.effine.json.MD5Tool;
 
 public class ServerOAuth {
 	private static String access_token;

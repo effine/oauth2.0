@@ -2,10 +2,10 @@ package cn.effine.dao;
 
 import java.util.List;
 
-import main.java.com.effine.model.OauthCode;
-
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
+
+import cn.effine.model.OauthCode;
 
 public class OauthCodeDaoImpl implements OauthCodeDao {
 

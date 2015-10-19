@@ -2,7 +2,7 @@ package cn.effine.service;
 
 import java.util.List;
 
-import main.java.com.effine.model.OauthCode;
+import cn.effine.model.OauthCode;
 
 public interface OauthCodeManager {
     public OauthCode getoCode(String id);

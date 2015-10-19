@@ -2,7 +2,7 @@ package cn.effine.dao;
 
 import java.util.List;
 
-import main.java.com.effine.model.OauthCode;
+import cn.effine.model.OauthCode;
 
 
 public interface OauthCodeDao {

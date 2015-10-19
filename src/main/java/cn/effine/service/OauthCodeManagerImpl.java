@@ -2,8 +2,8 @@ package cn.effine.service;
 
 import java.util.List;
 
-import main.java.com.effine.dao.OauthCodeDao;
-import main.java.com.effine.model.OauthCode;
+import cn.effine.dao.OauthCodeDao;
+import cn.effine.model.OauthCode;
 
 public class OauthCodeManagerImpl implements OauthCodeManager {
 

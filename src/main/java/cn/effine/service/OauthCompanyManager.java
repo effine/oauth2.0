@@ -2,8 +2,7 @@ package cn.effine.service;
 
 import java.util.List;
 
-import main.java.com.effine.model.OauthCompany;
-import main.java.com.effine.model.User;
+import cn.effine.model.OauthCompany;
 
 public interface OauthCompanyManager {
     public OauthCompany getoCompany(String id);

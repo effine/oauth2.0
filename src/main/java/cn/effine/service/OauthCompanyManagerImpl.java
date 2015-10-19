@@ -2,8 +2,8 @@ package cn.effine.service;
 
 import java.util.List;
 
-import main.java.com.effine.dao.OauthCompanyDao;
-import main.java.com.effine.model.OauthCompany;
+import cn.effine.dao.OauthCompanyDao;
+import cn.effine.model.OauthCompany;
 
 public class OauthCompanyManagerImpl implements OauthCompanyManager {
 

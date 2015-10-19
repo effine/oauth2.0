@@ -14,21 +14,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import main.java.com.effine.json.JsonObject;
-import main.java.com.effine.json.JsonUtil;
-import main.java.com.effine.json.MD5Tool;
-import main.java.com.effine.model.OauthAccessToken;
-import main.java.com.effine.model.OauthCode;
-import main.java.com.effine.model.OauthCompany;
-import main.java.com.effine.model.User;
-import main.java.com.effine.service.OauthAccessTokenManager;
-import main.java.com.effine.service.OauthCodeManager;
-import main.java.com.effine.service.OauthCompanyManager;
-import main.java.com.effine.service.UserManager;
-
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import cn.effine.json.JsonObject;
+import cn.effine.json.JsonUtil;
+import cn.effine.json.MD5Tool;
+import cn.effine.model.OauthAccessToken;
+import cn.effine.model.OauthCode;
+import cn.effine.model.OauthCompany;
+import cn.effine.model.User;
+import cn.effine.service.OauthAccessTokenManager;
+import cn.effine.service.OauthCodeManager;
+import cn.effine.service.OauthCompanyManager;
+import cn.effine.service.UserManager;
 
 @Controller
 @RequestMapping("/Oauth")

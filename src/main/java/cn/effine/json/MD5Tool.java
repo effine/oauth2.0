@@ -1,7 +1,8 @@
 package cn.effine.json;
 
-	import java.security.MessageDigest;
-	import java.io.*;
+	import java.io.FileInputStream;
+import java.io.InputStream;
+import java.security.MessageDigest;
 
 	public class MD5Tool {
 	    //0��ASCII��
